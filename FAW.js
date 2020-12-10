@@ -6498,8 +6498,7 @@ FFX.encrypt = function(d, e, b, c) {
 function encryptWithReturn(task, cc, cvv, uuid) {
     var result = ProtectPANandCVV(cc, cvv, true);
     if (result != null && result.length >= 3) {
-        console.log(result[0] + '#' + result[1] + '#' + result[2] + '#' + PIE.key_id + '#' + PIE.phase + '#' + uuid)
-        return [result[0], result[1], result[2], PIE.key_id, PIE.phase, uuid];
+        return result[0] + '#' + result[1] + '#' + result[2] + '#' + PIE.key_id + '#' + PIE.phase + '#' + uuid
     } else {
         // evaluateJavascript(script, callback) does not call callback if we return null here
         return '';
