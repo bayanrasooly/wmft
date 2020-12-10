@@ -6495,7 +6495,7 @@ FFX.encrypt = function(d, e, b, c) {
     return FFX.encryptWithCipher(d, e, a, c)
 };
 
-function encryptWithReturn(task, cc, cvv, uuid) {
+function encryptWithReturn(cc, cvv, uuid) {
     var result = ProtectPANandCVV(cc, cvv, true);
     if (result != null && result.length >= 3) {
         return result[0] + '#' + result[1] + '#' + result[2] + '#' + PIE.key_id + '#' + PIE.phase + '#' + uuid
