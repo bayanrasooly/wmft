@@ -5877,7 +5877,7 @@ var footsiteEncrypt = function(cc, month, year, cvv) {
 
     eCvv = cseInstance.encrypt({ generationtime: (new Date).toISOString(), cvc: cvv });
 
-    return card + "@" + month + "@" + year + "@" + eCvv;
+    return card + "@" + mm + "@" + yy + "@" + eCvv;
 };
 
 var SDW = {};
